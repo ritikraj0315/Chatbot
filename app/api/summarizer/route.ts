@@ -1,6 +1,11 @@
-// import { NextResponse } from "next/server";
-// import OpenAI from "openai";
+import { NextResponse } from "next/server";
+import { google,createGoogleGenerativeAI } from "@ai-sdk/google";
+import {generateText} from "ai";
 
+
+const client = createGoogleGenerativeAI({
+    apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY!,
+})
 
 
 // const client = new OpenAI({
